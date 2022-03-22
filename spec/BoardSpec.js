@@ -10,6 +10,7 @@ describe('Board', function() {
     var board = new Board(matrix);
 
     it('should not find a row conflict', function() {
+
       expect(board.hasAnyRowConflicts()).to.be.equal(false);
     });
 
@@ -44,6 +45,8 @@ describe('Board', function() {
     var board = new Board(matrix);
 
     it('should find a row conflict', function() {
+      // console.log('boardrows1' + board.rows());
+
       expect(board.hasAnyRowConflicts()).to.be.equal(true);
     });
 
@@ -124,6 +127,8 @@ describe('Board', function() {
     });
 
     it('should find a majorDiagonal conflict', function() {
+      // console.log('major ' + board._getFirstRowColumnIndexForMajorDiagonalOn());
+
       expect(board.hasAnyMajorDiagonalConflicts()).to.be.equal(true);
     });
 
