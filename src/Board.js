@@ -83,7 +83,7 @@
       // var rowsarr=this.rows();
       let arrRow = this.get(rowIndex);
       let count = 0;
-      console.log('arr' + arrRow);
+      // console.log('arr' + arrRow);
       for (let i = 0; i < arrRow.length; i++) {
         if (arrRow[i] === 1) {
           count++;
@@ -200,12 +200,12 @@
       let count = 0;
       for (let i = 0; i < this.get('n'); i++ ) {
         var checkColIndex = minorDiagonalColumnIndexAtFirstRow - i;
-        if (checkColIndex > 0) {
-          var checknum = this.get(i)[checkColIndex];
-          if (checknum === 1) {
-            count++;
-          }
+
+        var checknum = this.get(i)[checkColIndex];
+        if (checknum === 1) {
+          count++;
         }
+
       }
       if (count > 1) {
         return true;
